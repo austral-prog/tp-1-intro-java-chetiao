@@ -193,14 +193,19 @@ public class App {
 
     // 21. Iterate Over a Map
     public List<String> iterateMap(Map<String, String> map) {
-        // TODO: Implement this method
-        List<String> valuesList = new ArrayList<>();
 
-        for (String value : map.values()) {
-            valuesList.add(value);
+        List<String> result = new ArrayList<>();
+        for (Map.Entry<String, String> entry : map.entrySet()) {
+            String line = entry.getKey() + " -> " + entry.getValue();
+            System.out.println(line);  // imprime en consola
+            result.add(line);          // lo guarda en la lista
         }
+        return result;
 
-        return valuesList;
+
+
     }
+
+
 }
 
